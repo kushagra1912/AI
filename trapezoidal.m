@@ -1,0 +1,18 @@
+clc
+clear
+
+f = @(x) (cos(x)^2);
+a = -1;
+b= 1;
+n = 20;
+h = (b-a/n);
+sum = 0;
+
+for i = 1:n-1
+	x = a+(h*i);
+	sum = sum + 2*f(x);
+end
+
+sum = sum + f(a) + f(b);
+
+ans = sum*h/2
