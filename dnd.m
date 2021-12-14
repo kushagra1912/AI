@@ -11,11 +11,11 @@ end
 
 for i = 2:n
 	for j = i:n
-		F(i,j) = (F(i-1,j)-F(i-1,j-1))/x(j)-x(j-i+1);
+		F(i,j) = (F(i-1,j)-F(i-1,j-1))/(x(j)-x(j-i+1));
 	end
 end
 for i = 2:n
-	prod(1) = 1;
+	prod(i) = 1;
 	for j = 1:i-1
 		prod(i)=prod(i)*(p-x(j));
 	end
